@@ -1,0 +1,409 @@
+:root {
+    --primary: #004c97;
+    --secondary: #0f172a;
+    --accent: #e2e8f0;
+    --background: #ebf1ff ;
+    /* ; #f8fafc; */
+    --text: #334155;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+     font-family: "Plus Jakarta Sans", sans-serif;
+    /* font-family: 'Inter', sans-serif; */
+    color: var(--text);
+    line-height: 1.7;
+    background: var(--background);
+}
+
+
+h1, h2, h3 {
+ font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+h2 {
+font-size:16px;
+}
+
+/* ================= HEADER ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .9rem 1.5rem;
+}
+
+
+
+
+/* ================= HERO ================= */
+
+.hero {
+    background: linear-gradient(135deg, #004c97 0%, #0f172a 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+}
+
+
+.hero-content {
+    max-width: var(--max-width);
+    margin-left:2rem;    
+}
+
+.hero h1 {
+    font-size: clamp(1rem, 5vw, 2rem);
+    line-height: 1.15;
+}
+
+.hero p {
+    max-width: 1000px;
+    font-size: 1.15rem;
+    opacity: 0.95;
+}
+
+
+
+
+.hero-intro {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+}
+
+.hero-logo {
+    width: 80px;
+    object-fit: contain;
+    flex-shrink: 0;
+
+    transition: transform 0.1s linear;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    margin-bottom:0rem;
+    margin-top:0rem;
+    padding: 2rem 1.5rem;
+}
+
+section {
+    scroll-margin-top: 100px;
+}
+
+/* ================= CONTENT ================= */
+
+.section-title {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin-bottom: 0.5rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+
+.agenda-card {
+     background: white;
+    padding: 2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container + .container {
+    margin-top: -1rem;
+}
+
+ul {
+    padding-left: 1.3rem;
+}
+
+/* ================= AGENDA ================= */
+
+.agenda-list {
+    display: grid;
+    gap: 0rem;
+}
+
+.agenda-item, .agenda-item-break,.agenda-item1, .agenda-item2, .agenda-item3 {
+        font-size: 1.1rem;
+        border-radius: 8px;
+        padding: 1.15rem;
+}
+
+.agenda-item {
+    background: var(--background);
+    border-left: 5px solid var(--primary);
+
+}
+
+.agenda-item-break {
+    background: white;
+
+}
+
+.agenda-item3 {
+    background:  #dbe6ff ;
+    border-left: 5px solid var(--secondary);
+}
+
+.agenda-item1 {
+    background: #FDE3D1;
+    border-left: 5px solid #ff8832;
+}
+
+.agenda-item2 {
+    background: #ffeee3;
+    border-left: 5px solid #ff8832;
+}
+
+
+
+/* ================= ORGANIZERS ================= */
+
+.organizers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+    gap: 2rem;
+}
+
+.organizer-card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+
+.organizer-card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 2rem auto 1rem;
+    margin-bottom:0rem;
+    display: block;
+    border: 4px solid #f1f5f9;
+}
+
+.organizer-content {
+    text-align: center;
+    padding: 0.4rem 1.5rem 2rem;
+}
+
+.organizer-content h3 {
+    color: var(--secondary);
+    margin-bottom: .5rem;
+}
+
+.organizer-content p {
+    font-size: .95rem;
+}
+
+/* ================= HIGHLIGHTS ================= */
+
+.highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1.5rem;
+}
+
+.highlight-box {
+    background: white;
+    padding: 1.75rem;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+
+.highlight-box h3 {
+    margin-bottom: .8rem;
+    color: var(--primary);
+}
+
+.highlight {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.75rem;
+}
+
+.social-links a {
+    color: var(--primary);
+    font-size: 1.3rem;
+    transition: all 0.2s ease;
+}
+
+.social-links a:hover {
+    color: #0077b5;
+    transform: translateY(-2px);
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: var(--secondary);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* ================= MOBILE ================= */
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    /* Smaller sticky header */
+    header {
+        position: sticky;
+        top: 0;
+    }
+
+    /* More compact hero */
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero-intro {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.75rem;
+    }
+
+    .hero-content {
+        margin-left: 0;
+    }
+
+    .hero-logo {
+        width: 60px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+        line-height: 1.1;
+    }
+
+    .hero h2 {
+        font-size: 1rem;
+        margin-top: 0.25rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* Reduce section spacing */
+    .container {
+        padding: 1rem;
+    }
+
+    .card,
+    .agenda-card {
+        padding: 1.25rem;
+    }
+
+    /* Agenda items */
+    .agenda-item,
+    .agenda-item1,
+    .agenda-item2,
+    .agenda-item3,
+    .agenda-item-break {
+        padding: 0.9rem;
+        font-size: 0.95rem;
+    }
+
+    /* Titles */
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    /* Organizer cards */
+    .organizer-card img {
+        width: 120px;
+        height: 120px;
+        margin-top: 1.5rem;
+    }
+
+    .organizer-content {
+        padding: 0.5rem 1rem 1.5rem;
+    }
+
+    /* Fix scroll offset for sticky header */
+    section {
+        scroll-margin-top: 60px;
+    }
+}
+
+/* Extra small phones */
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 0.75rem;
+    }
+
+    .hero-logo {
+        width: 50px;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero h2 {
+        font-size: 0.9rem;
+    }
+
+    .hero p {
+        font-size: 0.8rem;
+    }
+
+    .card,
+    .agenda-card {
+        padding: 1rem;
+    }
+
+    .agenda-item,
+    .agenda-item1,
+    .agenda-item2,
+    .agenda-item3,
+    .agenda-item-break {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
