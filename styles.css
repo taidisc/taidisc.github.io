@@ -230,6 +230,59 @@ ul {
     font-size: .95rem;
 }
 
+/* ================= KEYNOTE SPEAKER ================= */
+
+.keynote-card {
+    background: white;
+    display: grid;
+    grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr);
+    overflow: hidden;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,.05);
+}
+
+.keynote-profile {
+    padding: 2rem;
+    text-align: center;
+}
+
+.keynote-profile img {
+    width: 160px;
+    height: 160px;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto 0.5rem;
+    border: 4px solid #f1f5f9;
+    border-radius: 50%;
+}
+
+.keynote-profile-content h3 {
+    color: var(--secondary);
+    margin-bottom: .5rem;
+}
+
+.keynote-profile-content p {
+    font-size: .95rem;
+}
+
+.keynote-bio {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-left: 1px solid #e5e7eb;
+}
+
+.keynote-bio a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.keynote-bio a:hover {
+    color: #0077b5;
+    transform: translateY(-2px);
+}
+
 /* ================= HIGHLIGHTS ================= */
 
 .highlights {
@@ -362,6 +415,25 @@ footer {
 
     .organizer-content {
         padding: 0.5rem 1rem 1.5rem;
+    }
+
+    .keynote-card {
+        grid-template-columns: 1fr;
+    }
+
+    .keynote-profile {
+        padding: 1.5rem 1rem 1rem;
+    }
+
+    .keynote-profile img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .keynote-bio {
+        padding: 1rem 1.25rem 1.5rem;
+        border-top: 1px solid #e5e7eb;
+        border-left: 0;
     }
 
     /* Fix scroll offset for sticky header */
